@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youcy Huang — Artist & Writer</title>
+  <meta name="description" content="Youcy Huang (黄鈺茜) — artist, writer, and researcher working at the intersection of painting, digital humanities, and contemporary art theory.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Youcy Huang</a>
+    <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="7" x2="20" y2="7"/><line x1="0" y1="13" x2="20" y2="13"/>
+      </svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="paintings.html">Paintings</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <main class="page">
+    <section class="hero">
+      <h1 class="hero-title">Youcy<br>Huang</h1>
+      <p class="hero-subtitle">黄鈺茜 — Artist, Writer &amp; Researcher</p>
+      <div class="hero-statement">
+        <p>
+          I work across painting, photography, writing, and digital media. My practice is grounded in a sustained inquiry into materiality, temporality, and the conditions under which meaning emerges — or fails to emerge — in contemporary life. Trained in pure art (BFA &amp; MFA, China Academy of Art), I am currently expanding my practice into digital humanities and computational methods, seeking new forms for old questions.
+        </p>
+        <p>
+          My theoretical work develops <em>ganxing</em> (感兴) — a concept rooted in Chinese ink painting's irreversible material logic — as both a historical analytic and a generative method for contemporary practice. My fiction and poetry examine family, memory, and the weight of unspoken inheritances. My public art projects explore what it means for art to hold a &ldquo;position of responsibility&rdquo; in communities it serves.
+        </p>
+        <p style="margin-top: var(--gap-md);">
+          <a href="about.html">About &amp; CV →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Index Grid -->
+    <div class="section-rule"></div>
+
+    <section class="section">
+      <p class="section-label">Selected Work</p>
+      <div class="gallery-grid wide" style="margin-top: var(--gap-sm);">
+        <a href="paintings.html" class="gallery-item">
+          <img src="assets/images/paintings/paint_01.png" alt="Semi-transparent mountain series" loading="lazy">
+          <div class="gallery-caption">
+            <span class="title">Paintings</span>
+            <span class="meta">Semi-transparent · Authenticity · Landscape</span>
+          </div>
+        </a>
+        <a href="photography.html" class="gallery-item">
+          <img src="assets/images/photography/photo_01.png" alt="Poetry and shadow photography" loading="lazy">
+          <div class="gallery-caption">
+            <span class="title">Photography</span>
+            <span class="meta">Poetry &amp; Shadow · Documentary</span>
+          </div>
+        </a>
+        <a href="writing.html" class="gallery-item">
+          <img src="assets/images/paintings/paint_00.png" alt="Writing and essays" loading="lazy">
+          <div class="gallery-caption">
+            <span class="title">Writing</span>
+            <span class="meta">Essays · Fiction · Poetry · Theory</span>
+          </div>
+        </a>
+        <a href="projects.html" class="gallery-item">
+          <img src="assets/images/photography/photo_00.png" alt="Public art and design projects" loading="lazy">
+          <div class="gallery-caption">
+            <span class="title">Projects &amp; Design</span>
+            <span class="meta">Public Art · Installation · Graphic</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

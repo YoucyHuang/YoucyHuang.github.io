@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Design — Youcy Huang</title>
+  <meta name="description" content="Projects by Youcy Huang — public art installations, community practice, graphic design, and the Anonymous Art Company.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Youcy Huang</a>
+  <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="7" x2="20" y2="7"/><line x1="0" y1="13" x2="20" y2="13"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="paintings.html">Paintings</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <section class="section">
+    <p class="section-label">Projects &amp; Design</p>
+    <h2 style="margin-bottom: var(--gap-xs);">Public Art · Community · Graphic Design</h2>
+    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-lg);">
+      Projects that move beyond the studio — public installations, community-based practice, design for cultural institutions, and an ongoing experiment in collective artistic production.
+    </p>
+
+    <!-- Public Art -->
+    <h4 style="margin-top: var(--gap-lg); margin-bottom: var(--gap-sm);">Public Art &amp; Installation</h4>
+
+    <div class="project-card">
+      <img src="assets/images/photography/photo_03.png" alt="Flowing Mountain · Wave Traces" loading="lazy">
+      <div>
+        <h3>Flowing Mountain · Wave Traces (流山·浪痕)</h3>
+        <p>Qingdao Public Art Pop-up Project. A semi-transparent mountain installation engaging coastal ecology and urban memory. Commission proposal for Qingdao West Coast cultural district.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/images/photography/photo_05.png" alt="Mountain-Sea Traces" loading="lazy">
+      <div>
+        <h3>Mountain-Sea Traces (山海游痕)</h3>
+        <p>Public sculpture series exploring the relationship between body, landscape, and inscription. The body as a brush, the mountain-sea as ink.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/images/photography/photo_08.png" alt="Stuttgart Installation" loading="lazy">
+      <div>
+        <h3>Body as Brush, Mountain-Sea as Ink</h3>
+        <p>Stuttgart installation concept. A spatial translation of Chinese landscape aesthetics into a participatory public artwork.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/images/photography/photo_10.png" alt="Truck Seal Project" loading="lazy">
+      <div>
+        <h3>Truck Seal Project (卡车印章)</h3>
+        <p>Community art initiative: recycled materials distributed to truck drivers, city-stamp system inspired by Chinese landscape painting brushwork. Visibility and dignity for mobile workers.</p>
+      </div>
+    </div>
+
+    <!-- Graphic & E-commerce -->
+    <h4 style="margin-top: var(--gap-xl); margin-bottom: var(--gap-sm);">Graphic &amp; Commercial Design</h4>
+    <div class="gallery-grid" id="design-gallery">
+      <!-- Filled by JS -->
+    </div>
+
+    <!-- Anonymous Art Company -->
+    <h4 style="margin-top: var(--gap-xl); margin-bottom: var(--gap-sm);">Organizational Design</h4>
+    <div class="project-card">
+      <div style="background: var(--paper); padding: var(--gap-lg); grid-column: 1 / -1;">
+        <h3>Anonymous Art Company (匿名艺术公司计划)</h3>
+        <p style="max-width: 640px;">A framework for collective-presenting creative agency: single principal maintains judgment rights, execution labor is outsourced, external presentation as institutional entity. Designed to accumulate long-term influence while protecting anonymity and preserving interfaces for future community practice. Built on the principle that &ldquo;thought does not need to become a system before it enters the world.&rdquo;</p>
+      </div>
+    </div>
+
+    <div class="section-rule"></div>
+    <p style="text-align: center;">
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

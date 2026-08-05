@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paintings — Youcy Huang</title>
+  <meta name="description" content="Paintings by Youcy Huang — Semi-transparent mountain series, Authenticity portrait series, poetry-image works.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Youcy Huang</a>
+  <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="7" x2="20" y2="7"/><line x1="0" y1="13" x2="20" y2="13"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="paintings.html">Paintings</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<main class="page" id="paintings-gallery">
+  <section class="section">
+    <p class="section-label">Paintings</p>
+    <h2 style="margin-bottom: var(--gap-xs);">Semi-transparent · Authenticity · Landscape</h2>
+    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-lg);">
+      My painting practice investigates materiality and presence. The semi-transparent mountain series layers acrylic, silk, and light to make visible what lies behind the visible — a meditation on distance, memory, and the irreversibility of gesture. The authenticity series works from direct observation, capturing subjects in moments outside performative self-presentation.
+    </p>
+
+    <h4 style="margin-top: var(--gap-lg); margin-bottom: var(--gap-sm);">Semi-transparent Mountain Series</h4>
+    <div class="gallery-grid" data-series="transparent">
+    </div>
+
+    <h4 style="margin-top: var(--gap-xl); margin-bottom: var(--gap-sm);">Authenticity Portrait Series</h4>
+    <div class="gallery-grid" data-series="authenticity">
+    </div>
+
+    <div class="section-rule"></div>
+    <p style="text-align: center;">
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
