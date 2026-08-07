@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing — Youcy Huang</title>
-  <meta name="description" content="Writing archive — essays, fiction, poetry, theory by Youcy Huang. Search by time period or keyword.">
+  <meta name="description" content="Writing by Youcy Huang — critical essays, fiction, and poetry.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
 </head>
@@ -24,40 +24,119 @@
 <main class="page">
   <div class="page-inner">
 
-    <h2 style="margin-bottom: var(--gap-xs);">Writing Archive</h2>
-    <p style="color: var(--ink-light); margin-bottom: var(--gap-lg); max-width: 600px;">
-      Documents organized by time. Drag to reorder. Click titles or descriptions to edit. Use the search panel to query the artist&rsquo;s intellectual trajectory across time periods.
-    </p>
+    <h2 style="margin-bottom:.3rem;">Writing</h2>
+    <p style="color:var(--ink-light);margin-bottom:2.5rem;">Essays · Fiction · Poetry</p>
 
     <div class="writing-layout">
 
-      <!-- LEFT: Document List -->
+      <!-- LEFT: Document Lists -->
       <div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--gap-sm);">
-          <h4>Documents</h4>
-          <button class="add-doc-btn" onclick="Writing.addDocument()">+ New Document</button>
+
+        <!-- A: Critical Essays -->
+        <div class="writing-cat">
+          <h4>A. Critical Essays</h4>
+          <ul class="doc-list">
+            <li class="doc-item">
+              <span class="doc-title">The Scholar-Official&rsquo;s Utopia (士大夫的乌托邦)</span>
+              <span class="doc-year">2024</span>
+              <span class="doc-desc">Subjectivity and symbolic violence in Chinese literati and European aristocratic portraiture — a comparative analysis of who gets to display and who is displayed.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">The Emperor of Quotations: Cynicism&rsquo;s Golden Shield (名言皇帝)</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">How famous quotes function as authority surrogates in Chinese and Western public discourse — when &ldquo;who said it&rdquo; replaces &ldquo;what was said.&rdquo;</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">From Field to Self-Cultivation: New Confucian Ethics&rsquo; Spatial Generative Path (从场域到修身)</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">Proposing an inverted path — morality guiding self-cultivation through designed spatial environments, with AI as a dynamic facilitator of ethical atmospheres.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">Water-based Materials, Temporal Structure, and <em>Ganxing</em> (水性材料与感兴)</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">How the irreversible material logic of ink painting trains a subject who bears consequences in flowing time — <em>ganxing</em> as a generative method, not just a historical concept.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">From Robert Ryman: Body, Trace, and Presence in Painting</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">MFA thesis. Ryman&rsquo;s white paintings as an inquiry into materiality, the body&rsquo;s irreducible presence, and the event of viewing — a painter&rsquo;s phenomenology of the surface.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">Involution and Lying Flat: Youth Subjectivity in Contemporary China (内卷与躺平)</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">Structural analysis of how compressed modernization severed traditional meaning structures without building new ones — and what young people do when &ldquo;effort→reward&rdquo; breaks.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">The Aphasia of Contemporary Art (失语的当代艺术)</span>
+              <span class="doc-year">2025</span>
+              <span class="doc-desc">Guaren Project core essay. Diagnosing art&rsquo;s loss of a position of responsibility under neoliberal governance — and proposing channel-type art practice as an alternative.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">Witness and Transformation: Sebastião Salgado&rsquo;s Documentary Photography</span>
+              <span class="doc-year">2024</span>
+              <span class="doc-desc">Academic paper on the ethics of aestheticizing suffering — can beauty serve truth in documentary practice, or does it inevitably filter and consume what it claims to witness?</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">Seeing Mountains as Mountains Again: Zao Wou-Ki&rsquo;s Three Metamorphoses</span>
+              <span class="doc-year">2024</span>
+              <span class="doc-desc">Tracing Zao Wou-Ki&rsquo;s journey through three stages of East-West synthesis — from symbolic insertion to spontaneous expression to beyond the question of East and West.</span>
+            </li>
+          </ul>
         </div>
 
-        <ul class="doc-list" id="doc-list">
-          <!-- Populated by JS -->
-        </ul>
+        <!-- B: Fiction -->
+        <div class="writing-cat">
+          <h4>B. Fiction</h4>
+          <ul class="doc-list">
+            <li class="doc-item">
+              <span class="doc-title"><em>Family Banquet</em> (家宴)</span>
+              <span class="doc-year">2025–2026 &nbsp;·&nbsp; Novel</span>
+              <span class="doc-desc">The dining table as courtroom — mother-daughter love disguised as criticism, silence as the only speech that carries no guilt. The blood in the refrigerator seeped in over decades.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title"><em>The Last Letter to Mother</em> (给母亲的最后一封信)</span>
+              <span class="doc-year">2024 &nbsp;·&nbsp; Novella, 16,095 words</span>
+              <span class="doc-desc">A daughter&rsquo;s unsent letter. When &ldquo;I did everything for you&rdquo; becomes a moral position that ends all argument, what remains is a letter addressed to a name, not a title.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title"><em>Qingming, Received</em> (清茗，收)</span>
+              <span class="doc-year">2025 &nbsp;·&nbsp; AI-Assisted Short Film Script</span>
+              <span class="doc-desc">Meta-narrative: an AIGC creator tries to adapt her novel with AI. The AI can generate perfect images but cannot understand standing below a window without going up. So she speaks the parts AI cannot.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title"><em>Blue Stops</em> (蓝止)</span>
+              <span class="doc-year">2025 &nbsp;·&nbsp; Guizhou Batik · Short Film Script</span>
+              <span class="doc-desc">A batik designer returns to her Miao village after years away. Tradition, innovation, and a letter that uses her teacher&rsquo;s name instead of her title. The reply is one word: &ldquo;好.&rdquo;</span>
+            </li>
+          </ul>
+        </div>
 
-        <p style="font-family: var(--sans); font-size: .6rem; color: var(--faint); margin-top: var(--gap-sm); letter-spacing: .03em;">
-          Drag to reorder · Click text to edit · Changes saved in your browser
-        </p>
+        <!-- C: Poetry -->
+        <div class="writing-cat">
+          <h4>C. Poetry</h4>
+          <ul class="doc-list">
+            <li class="doc-item">
+              <span class="doc-title">Selected Poems: <em>I and Them</em> · <em>Confession of a Clear Wind</em> · <em>Silent Night</em></span>
+              <span class="doc-year">2023–2024</span>
+              <span class="doc-desc">Early poems — the sea, bodies, death, silence, and the distance between people standing on the same shore.</span>
+            </li>
+            <li class="doc-item">
+              <span class="doc-title">Selected Poems: <em>Rebirth</em> · <em>The Small Dark Room</em> · <em>Growth</em> · <em>Returning Home</em></span>
+              <span class="doc-year">2025–2026</span>
+              <span class="doc-desc">Later poems — mother, cracks, the well that thirsts, the sun splitting the earth in two. More bone. Less fog.</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
       <!-- RIGHT: AI Search -->
-      <div class="search-sidebar" id="search-sidebar">
-        <h4>AI Inquiry</h4>
-        <p class="search-hint">
-          Ask: &ldquo;What was the artist thinking between 2021 and 2023?&rdquo; or search for themes like &ldquo;Heidegger&rdquo;, &ldquo;landscape&rdquo;, &ldquo;embodiment&rdquo;.
-        </p>
-        <input type="text" class="search-input" id="search-input"
-               placeholder='e.g. "2022–2024 · thoughts on authenticity"'
-               onkeyup="Writing.search(this.value)">
+      <div class="search-box" id="search-box">
+        <h4>Search</h4>
+        <p class="hint">Query by time, theme, or keyword. Try: &ldquo;Heidegger painting&rdquo; · &ldquo;2024–2025 landscape&rdquo; · &ldquo;body embodiment&rdquo;</p>
+        <input type="text" id="search-input" placeholder='e.g. "2023 to 2025 · authenticity"' oninput="Writing.search(this.value)">
         <div class="search-results" id="search-results">
-          <p class="search-empty">Results will appear here.</p>
+          <p class="sr-empty">Results appear here.</p>
         </div>
       </div>
 
@@ -65,11 +144,7 @@
   </div>
 </main>
 
-<footer class="footer">
-  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<footer class="footer"><p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p></footer>
 <script src="assets/js/writing.js"></script>
 </body>
 </html>

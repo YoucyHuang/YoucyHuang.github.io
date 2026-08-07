@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paintings — Youcy Huang</title>
-  <meta name="description" content="Paintings by Youcy Huang — a chronological catalog organized by six periods, from early practice to MFA graduation.">
+  <meta name="description" content="Catalogue of paintings by Youcy Huang — fifteen years of practice organized by period.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
 </head>
@@ -24,40 +24,37 @@
 <main class="page">
   <div class="page-inner">
 
-    <div class="catalog-header">
-      <p class="section-label">Paintings</p>
-      <h1>A Fifteen-Year Practice</h1>
-      <p class="catalog-intro">
-        My painting developed alongside my thinking. From early realism through modern and postmodern philosophy — Descartes, Kant, Heidegger, postcolonial theory — each shift in understanding changed what appeared on the canvas. This catalog organizes the work by period. Click any period to expand. Click any painting to view annotations.
-      </p>
+    <!-- Toolbar -->
+    <div class="catalog-toolbar">
+      <h1>Catalogue of Paintings</h1>
+      <div class="catalog-controls">
+        <label>Thumbnail Size</label>
+        <input type="range" id="size-slider" min="150" max="320" value="210" oninput="Paintings.resize(this.value)">
+        <span style="font-family:var(--sans);font-size:.6rem;color:var(--muted);min-width:36px" id="size-label">210px</span>
+      </div>
     </div>
 
-    <!-- Periods populated by JS -->
-    <div id="catalog-periods"></div>
+    <!-- Periods rendered by JS -->
+    <div id="catalogue"></div>
 
   </div>
 </main>
 
-<!-- Annotation Side Panel -->
-<div class="annotation-panel" id="annotation-panel">
-  <button class="annotation-close" onclick="Paintings.closeAnnotation()">Close ×</button>
-  <h3 id="ap-title"></h3>
-  <p class="meta" id="ap-meta"></p>
-  <div class="text" id="ap-text" contenteditable="true"></div>
-  <button class="save-btn" onclick="Paintings.saveAnnotation()">Save Annotation</button>
+<!-- Annotation Panel -->
+<div class="ann-panel" id="ann-panel">
+  <button class="ann-close" onclick="Paintings.closeAnn()">Close ×</button>
+  <h3 id="ann-title"></h3>
+  <p class="meta" id="ann-meta"></p>
+  <textarea id="ann-text" placeholder="Write your annotation for this work..."></textarea>
+  <button class="save-btn" onclick="Paintings.saveAnn()">Save</button>
 </div>
-
-<footer class="footer">
-  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
-</footer>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close">Close</button>
+  <button class="lb-close">Close</button>
   <img src="" alt="">
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 <script src="assets/js/paintings.js"></script>
 </body>
 </html>

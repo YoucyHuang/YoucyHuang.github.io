@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital — Youcy Huang</title>
-  <meta name="description" content="Digital projects by Youcy Huang — small websites and interactive experiments built through vibe coding.">
+  <meta name="description" content="Digital experiments by Youcy Huang — DH learning framework, German study notes, and web tools.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
 </head>
@@ -24,27 +24,46 @@
 <main class="page">
   <div class="page-inner">
 
-    <h2 style="margin-bottom: var(--gap-xs);">Digital Experiments</h2>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-lg);">
-      Small websites and interactive projects built through vibe coding — experiments at the intersection of art, technology, and user interaction. Each is a sketch, not a product.
-    </p>
+    <h2 style="margin-bottom:.3rem;">Digital</h2>
+    <p style="color:var(--ink-light);margin-bottom:2rem;">Learning frameworks, tools, and experiments.</p>
 
-    <div class="digital-grid" id="digital-grid">
-      <!-- Populated by JS -->
+    <div class="card-grid">
+
+      <!-- DH Learning Framework -->
+      <div class="card">
+        <h3>DH Learning Framework</h3>
+        <p class="desc">A structured curriculum and resource map for my transition from fine arts into Digital Humanities. Tracking: Python basics, TEI/XML, data modeling, computer vision for art history, and HCI for cultural heritage. Built as a living document — updated as I learn.</p>
+        <span class="tag">Digital Humanities &nbsp;·&nbsp; Curriculum Design &nbsp;·&nbsp; 2026</span>
+      </div>
+
+      <!-- German Study Notes -->
+      <div class="card">
+        <h3>German Study Notes (Deutsch lernen)</h3>
+        <p class="desc">Personal German language learning system — vocabulary decks organized by theme (philosophy, art history, daily life), grammar notes structured for Chinese speakers, and a reading list from A2 to B2. Started at age 19 for Heidegger. Continuing for TU Dresden.</p>
+        <span class="tag">German &nbsp;·&nbsp; Language Learning &nbsp;·&nbsp; 2023–2026</span>
+      </div>
+
+      <!-- Additional tools -->
+      <div class="card">
+        <h3>Interactive Scroll Viewer (prototype)</h3>
+        <p class="desc">Experiment translating the Chinese handscroll viewing experience to the web. Horizontal scroll with marginal annotations appearing at scroll position. Proof of concept.</p>
+        <span class="tag">HTML · CSS · JavaScript &nbsp;·&nbsp; 2026</span>
+      </div>
+
+      <div class="card">
+        <h3>AI Prompt Archive</h3>
+        <p class="desc">Documented prompts and outputs from ComfyUI and Midjourney workflows used in creative projects (Qingming Received, Blue Stops). Organized by project and technique.</p>
+        <span class="tag">AIGC &nbsp;·&nbsp; ComfyUI &nbsp;·&nbsp; 2025–2026</span>
+      </div>
+
     </div>
 
-    <div class="section-rule" style="margin-top: var(--gap-xl);"></div>
-    <p style="text-align: center;">
-      <a href="index.html">← Back to Home</a>
-    </p>
+    <div class="rule"></div>
+    <p style="text-align:center;"><a href="index.html">← Back to Home</a></p>
 
   </div>
 </main>
 
-<footer class="footer">
-  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
-</footer>
-
-<script src="assets/js/digital.js"></script>
+<footer class="footer"><p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p></footer>
 </body>
 </html>
