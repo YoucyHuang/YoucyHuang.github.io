@@ -3,83 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youcy Huang — Artist & Writer</title>
-  <meta name="description" content="Youcy Huang (黄鈺茜) — artist, writer, and researcher working at the intersection of painting, digital humanities, and contemporary art theory.">
+  <title>Youcy Huang</title>
+  <meta name="description" content="Youcy Huang (黄鈺茜) — artist, writer, and researcher.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
 </head>
 <body>
 
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">Youcy Huang</a>
-    <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="7" x2="20" y2="7"/><line x1="0" y1="13" x2="20" y2="13"/>
-      </svg>
-    </button>
-    <ul class="nav-links">
-      <li><a href="paintings.html">Paintings</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Youcy Huang</a>
+  <ul class="nav-links">
+    <li><a href="paintings.html">Paintings</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="digital.html">Digital</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
 
-  <main class="page">
-    <section class="hero">
-      <h1 class="hero-title">Youcy<br>Huang</h1>
-      <p class="hero-subtitle">黄鈺茜 &mdash; Artist, Writer &amp; Researcher</p>
-      <div class="hero-statement">
-        <p>
-          I am a research-based painter completing my MFA at the China Academy of Art after fifteen years of practice. I work across painting, fiction, poetry, and art theory. My practice and my thinking developed together — from early realism through modern and postmodern philosophy to an ongoing inquiry into materiality, embodiment, and the conditions under which meaning emerges in contemporary life.
-        </p>
-        <p>
-          I am currently preparing to enter the Digital Humanities — not to leave art behind, but because I have arrived at a question that art alone cannot answer: how the trained body of a painter can contribute to building digital cultural heritage that is not only informative, but alive.
-        </p>
-      </div>
-    </section>
+<main class="page">
+  <div class="page-inner" style="padding-top: var(--gap-xl);">
+    <h1 class="hero-title" style="font-size:clamp(3rem,7vw,6rem);">Youcy Huang</h1>
+    <p class="hero-subtitle" style="font-size:1.2rem;margin-bottom:var(--gap-lg);">黄鈺茜 — Artist, Writer &amp; Researcher</p>
+    <p style="max-width:600px;color:var(--ink-light);font-size:1rem;line-height:1.9;">
+      Research-based painter (BFA &amp; MFA, China Academy of Art). Fifteen years of practice across painting, fiction, poetry, and art theory. Currently preparing to enter Digital Humanities — extending a body-based artistic practice into computational methods and digital cultural heritage.
+    </p>
 
-    <div class="section-rule"></div>
+    <div class="section-rule" style="margin: var(--gap-lg) 0;"></div>
 
-    <section class="section">
-      <p class="section-label">Selected Work</p>
-      <div class="gallery-grid wide" style="margin-top: var(--gap-sm);">
-        <a href="paintings.html" class="gallery-item">
-          <img src="assets/images/artworks/image_11.jpeg" alt="Semi-transparent mountain series" loading="lazy">
-          <div class="gallery-caption">
-            <span class="title">Paintings</span>
-            <span class="meta">Fifteen Years of Practice &nbsp;·&nbsp; 6 Stages</span>
-          </div>
-        </a>
-        <a href="writing.html" class="gallery-item">
-          <img src="assets/images/artworks/image_02.jpeg" alt="Writing" loading="lazy">
-          <div class="gallery-caption">
-            <span class="title">Writing</span>
-            <span class="meta">Essays &nbsp;·&nbsp; Fiction &nbsp;·&nbsp; Poetry &nbsp;·&nbsp; Theory</span>
-          </div>
-        </a>
-        <a href="projects.html" class="gallery-item">
-          <img src="assets/images/artworks/image_10.jpeg" alt="Projects and design" loading="lazy">
-          <div class="gallery-caption">
-            <span class="title">Projects &amp; Design</span>
-            <span class="meta">Public Art &nbsp;·&nbsp; Installation &nbsp;·&nbsp; Graphic</span>
-          </div>
-        </a>
-        <a href="about.html" class="gallery-item">
-          <img src="assets/images/artworks/image_18.jpeg" alt="About Youcy Huang" loading="lazy">
-          <div class="gallery-caption">
-            <span class="title">About &amp; CV</span>
-            <span class="meta">Bio &nbsp;·&nbsp; Education &nbsp;·&nbsp; Contact</span>
-          </div>
-        </a>
-      </div>
-    </section>
-  </main>
+    <div class="gallery-grid wide" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));">
+      <a href="paintings.html" class="gallery-item">
+        <img src="assets/images/artworks/image_11.jpeg" alt="Paintings catalog" loading="lazy">
+        <div class="gallery-caption">
+          <span class="title">Paintings</span>
+          <span class="meta">Catalog &mdash; Six Periods</span>
+        </div>
+      </a>
+      <a href="writing.html" class="gallery-item">
+        <img src="assets/images/artworks/image_02.jpeg" alt="Writing archive" loading="lazy">
+        <div class="gallery-caption">
+          <span class="title">Writing</span>
+          <span class="meta">Archive &mdash; Essays · Fiction · Poetry · Theory</span>
+        </div>
+      </a>
+      <a href="digital.html" class="gallery-item">
+        <img src="assets/images/artworks/image_10.jpeg" alt="Digital experiments" loading="lazy">
+        <div class="gallery-caption">
+          <span class="title">Digital</span>
+          <span class="meta">Vibe Coding · Web Experiments</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
 
-  <footer class="footer">
-    <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+<footer class="footer">
+  <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
+</footer>
 </body>
 </html>

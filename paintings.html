@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paintings — Youcy Huang</title>
-  <meta name="description" content="Paintings by Youcy Huang — a chronological journey through fifteen years of practice, from early realism through Cézanne, Heidegger, and Chinese-Western synthesis.">
+  <meta name="description" content="Paintings by Youcy Huang — a chronological catalog organized by six periods, from early practice to MFA graduation.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
 </head>
@@ -12,116 +12,52 @@
 
 <nav class="nav">
   <a href="index.html" class="nav-logo">Youcy Huang</a>
-  <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5">
-      <line x1="0" y1="1" x2="20" y2="1"/><line x1="0" y1="7" x2="20" y2="7"/><line x1="0" y1="13" x2="20" y2="13"/>
-    </svg>
-  </button>
   <ul class="nav-links">
-    <li><a href="paintings.html">Paintings</a></li>
+    <li><a href="paintings.html" class="active">Paintings</a></li>
     <li><a href="writing.html">Writing</a></li>
+    <li><a href="digital.html">Digital</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
 </nav>
 
-<!-- ============================================ -->
-<!-- PAINTINGS — CHRONOLOGICAL NARRATIVE           -->
-<!-- ============================================ -->
 <main class="page">
+  <div class="page-inner">
 
-  <!-- Section Header -->
-  <section class="section" style="padding-bottom: 0;">
-    <p class="section-label">Paintings</p>
-    <h2 style="margin-bottom: var(--gap-xs);">Fifteen Years of Practice</h2>
-    <p style="max-width: 620px; color: var(--ink-light);">
-      My painting developed alongside my thinking. From early realism through modern and postmodern turns — Descartes, Kant, Heidegger, postcolonial theory — each shift in understanding changed what appeared on the canvas. This is not a portfolio of finished works. It is the record of a mind and a body learning to see.
-    </p>
-  </section>
-
-  <!-- ── Stage 1: Early Years (age 9–17) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 1 &nbsp;·&nbsp; Early Practice</p>
-    <h3>Childhood &amp; Adolescence</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      I have loved painting and fiction since I was a child. These early works — from age nine through seventeen — are not sophisticated, but they carry something that academic training later tried to refine but never replace: the instinct to make marks that mean something.
-    </p>
-    <div class="gallery-grid" data-stage="early">
-      <!-- JS fills -->
+    <div class="catalog-header">
+      <p class="section-label">Paintings</p>
+      <h1>A Fifteen-Year Practice</h1>
+      <p class="catalog-intro">
+        My painting developed alongside my thinking. From early realism through modern and postmodern philosophy — Descartes, Kant, Heidegger, postcolonial theory — each shift in understanding changed what appeared on the canvas. This catalog organizes the work by period. Click any period to expand. Click any painting to view annotations.
+      </p>
     </div>
-  </section>
 
-  <!-- ── Stage 2: Academic Realism (2021–2022) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 2 &nbsp;·&nbsp; 2021–2022</p>
-    <h3>Academic Training &amp; the Classical Ideal</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      At the China Academy of Art, I began formal academic training. My early intention was to reproduce the visible world as faithfully as possible — building a three-dimensional space on a two-dimensional plane, following the lineage of Greek art through Da Vinci and Michelangelo. I was reading Plato, then Kant: the world can be mirrored, but we can only know phenomena, never the thing-in-itself. At the same time, I became obsessed with Cézanne — the first artist who showed me that painting is not about reproducing vision, but about constructing it.
-    </p>
-    <div class="gallery-grid" data-stage="academic">
-    </div>
-  </section>
+    <!-- Periods populated by JS -->
+    <div id="catalog-periods"></div>
 
-  <!-- ── Stage 3: The Heidegger Turn (2023) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 3 &nbsp;·&nbsp; 2023</p>
-    <h3>The Heidegger Turn</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      In 2023, I took a German A1 course online — not for career planning, but because I was reading Heidegger and certain concepts like <em>Dasein</em> cannot be translated into Chinese without losing their weight. His essay &ldquo;The Origin of Art&rdquo; changed how I understood what painting is: not representation, not expression, but a happening of truth — an event in which a world opens. I began to understand my own practice not as making pictures, but as creating conditions for presence.
-    </p>
-    <div class="gallery-grid" data-stage="heidegger">
-    </div>
-  </section>
-
-  <!-- ── Stage 4: Authenticity Series (2024) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 4 &nbsp;·&nbsp; 2024</p>
-    <h3>Authenticity Series</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      Heidegger&rsquo;s distinction between authentic and inauthentic existence — between <em>Dasein</em> and <em>das Man</em> — led me to a series of portraits. I wanted to capture people not as they perform themselves for others, but as they are in moments when the performance drops. These paintings are not about likeness. They are about the quiet interval between one mask and the next.
-    </p>
-    <div class="gallery-grid" data-stage="authenticity">
-    </div>
-  </section>
-
-  <!-- ── Stage 5: Chinese-Western Synthesis (2024–2025) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 5 &nbsp;·&nbsp; 2024–2025</p>
-    <h3>Chinese Landscape, Western Language</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      After studying postcolonial theory, I realized something uncomfortable: I knew more about Western culture than the culture I grew up in. Most of the time, I had been looking at my own tradition through a Western lens. I began to reread Chinese art history seriously, and to ask: how do you build a bridge that lets contemporary viewers — Chinese and non-Chinese alike — enter the world that ancient painters created? My answer became a series of experiments: classic Chinese landscape composition filtered through Western painters I love — Twombly, Robert Ryman, Cézanne. Traditional Chinese painting uses &ldquo;moving focus,&rdquo; not optical perspective. It is not a window. It is a walk. My semi-transparent mountain series is an attempt to make that walk visible.
-    </p>
-    <div class="gallery-grid wide" data-stage="landscape">
-    </div>
-  </section>
-
-  <!-- ── Stage 6: Graduation (2025–2026) ── -->
-  <div class="section-rule"></div>
-  <section class="section" style="padding-top: var(--gap-md);">
-    <p class="section-label">Stage 6 &nbsp;·&nbsp; 2025–2026</p>
-    <h3>Graduation Work &amp; the Turn to DH</h3>
-    <p style="max-width: 600px; color: var(--ink-light); margin-bottom: var(--gap-md);">
-      My MFA thesis examined Robert Ryman — not as a minimalist, but as a painter who understood that the act of painting is fundamentally about body, trace, and presence. My graduation creation continued the semi-transparent mountain series. In May 2026, I participated in a rural revitalization project, deployed an AI agent on my computer, and built small interactive websites for the first time. That experience opened the door to Digital Humanities — not as a departure from art, but as a new field for old questions.
-    </p>
-    <div class="gallery-grid" data-stage="graduation">
-    </div>
-  </section>
-
-  <div class="section-rule"></div>
-  <p style="text-align: center; padding-bottom: var(--gap-lg);">
-    <a href="index.html">← Back to Home</a>
-  </p>
+  </div>
 </main>
+
+<!-- Annotation Side Panel -->
+<div class="annotation-panel" id="annotation-panel">
+  <button class="annotation-close" onclick="Paintings.closeAnnotation()">Close ×</button>
+  <h3 id="ap-title"></h3>
+  <p class="meta" id="ap-meta"></p>
+  <div class="text" id="ap-text" contenteditable="true"></div>
+  <button class="save-btn" onclick="Paintings.saveAnnotation()">Save Annotation</button>
+</div>
 
 <footer class="footer">
   <p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">Close</button>
+  <img src="" alt="">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="assets/js/paintings.js"></script>
 </body>
 </html>
