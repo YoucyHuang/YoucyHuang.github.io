@@ -147,6 +147,12 @@ a:hover{border-bottom-color:var(--ink)}
 .idx-item .idx-title{font-family:var(--serif);font-style:italic;font-size:.88rem}
 .idx-item .idx-meta{font-family:var(--sans);font-size:.58rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 
+/* Homepage section links */
+.hp-link{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--rule-light);text-decoration:none;border-bottom:1px solid var(--rule-light)}
+.hp-link:hover{border-bottom-color:var(--rule)}
+.hp-link img{width:100%;height:auto;display:block}
+@media(max-width:700px){.hp-link{grid-template-columns:1fr;gap:1rem}}
+
 /* Responsive */
 @media(max-width:860px){
   .writing-layout{grid-template-columns:1fr}
