@@ -4,9 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing — Youcy Huang</title>
-  <meta name="description" content="Writing by Youcy Huang — critical essays, fiction, and poetry.">
+  <meta name="description" content="Writing by Youcy Huang — critical essays, fiction, and poetry. Click to read full texts.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
+  <style>
+    /* Writing-page specific */
+    .doc-item{cursor:pointer;padding:.8rem 0;border-bottom:1px solid var(--rule-light);transition:background .15s}
+    .doc-item:hover{background:var(--warm)}
+    .doc-item .doc-title{font-weight:600;font-size:.95rem;display:block;margin-bottom:2px}
+    .doc-item .doc-desc{font-family:var(--serif);font-style:italic;font-size:.78rem;color:var(--ink-light);font-weight:300}
+    .doc-item .doc-year{font-family:var(--sans);font-size:.58rem;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;display:block;margin-top:2px}
+    .doc-item .expand-hint{font-family:var(--sans);font-size:.55rem;color:var(--faint);letter-spacing:.04em;text-transform:uppercase}
+    .doc-item.open{background:var(--warm)}
+
+    /* Full text area */
+    .doc-full{display:none;padding:0 0 1rem 0}
+    .doc-item.open .doc-full{display:block}
+    .doc-full .editor{
+      width:100%;min-height:300px;border:1px solid var(--rule-light);
+      background:var(--cream);font-family:var(--serif);font-size:.9rem;
+      line-height:1.9;padding:1rem;resize:vertical;outline:none;
+      white-space:pre-wrap;word-wrap:break-word;
+    }
+    .doc-full .editor:focus{border-color:var(--ink)}
+    .doc-full .editor-toolbar{
+      display:flex;justify-content:space-between;align-items:center;
+      margin-bottom:.5rem;
+    }
+    .doc-full .save-indicator{
+      font-family:var(--sans);font-size:.55rem;color:var(--muted);letter-spacing:.04em;
+    }
+    .doc-full .word-count{
+      font-family:var(--sans);font-size:.55rem;color:var(--faint);letter-spacing:.04em;
+    }
+
+    /* Search */
+    .search-toggle{
+      position:fixed;right:1.5rem;bottom:2rem;
+      width:44px;height:44px;border-radius:50%;
+      background:var(--ink);color:var(--cream);border:none;
+      font-family:var(--serif);font-size:1.2rem;cursor:pointer;
+      box-shadow:0 2px 12px rgba(0,0,0,.12);z-index:80;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .search-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(250,250,247,.97)}
+    .search-overlay.on{display:flex;flex-direction:column;align-items:center;padding-top:8rem}
+    .search-overlay input{width:100%;max-width:560px;padding:1rem 1.2rem;border:none;border-bottom:1px solid var(--rule);background:transparent;font-family:var(--serif);font-size:1.5rem;outline:none;text-align:center}
+    .search-overlay input:focus{border-bottom-color:var(--ink)}
+    .search-overlay .results{max-width:560px;width:100%;margin-top:2rem;max-height:50vh;overflow-y:auto}
+    .search-overlay .close-btn{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--sans);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer}
+
+    @media(max-width:700px){
+      .search-overlay input{font-size:1.1rem;padding:.8rem}
+    }
+  </style>
 </head>
 <body>
 
@@ -24,125 +75,42 @@
 <main class="page">
   <div class="page-inner">
 
-    <h2 style="margin-bottom:.3rem;">Writing</h2>
-    <p style="color:var(--ink-light);margin-bottom:2.5rem;">Essays · Fiction · Poetry</p>
-
-    <div class="writing-layout">
-
-      <!-- LEFT: Document Lists -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2.5rem;">
       <div>
-
-        <!-- A: Critical Essays -->
-        <div class="writing-cat">
-          <h4>A. Critical Essays</h4>
-          <ul class="doc-list">
-            <li class="doc-item">
-              <span class="doc-title">The Scholar-Official&rsquo;s Utopia (士大夫的乌托邦)</span>
-              <span class="doc-year">2024</span>
-              <span class="doc-desc">Subjectivity and symbolic violence in Chinese literati and European aristocratic portraiture — a comparative analysis of who gets to display and who is displayed.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">The Emperor of Quotations: Cynicism&rsquo;s Golden Shield (名言皇帝)</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">How famous quotes function as authority surrogates in Chinese and Western public discourse — when &ldquo;who said it&rdquo; replaces &ldquo;what was said.&rdquo;</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">From Field to Self-Cultivation: New Confucian Ethics&rsquo; Spatial Generative Path (从场域到修身)</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">Proposing an inverted path — morality guiding self-cultivation through designed spatial environments, with AI as a dynamic facilitator of ethical atmospheres.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">Water-based Materials, Temporal Structure, and <em>Ganxing</em> (水性材料与感兴)</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">How the irreversible material logic of ink painting trains a subject who bears consequences in flowing time — <em>ganxing</em> as a generative method, not just a historical concept.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">From Robert Ryman: Body, Trace, and Presence in Painting</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">MFA thesis. Ryman&rsquo;s white paintings as an inquiry into materiality, the body&rsquo;s irreducible presence, and the event of viewing — a painter&rsquo;s phenomenology of the surface.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">Involution and Lying Flat: Youth Subjectivity in Contemporary China (内卷与躺平)</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">Structural analysis of how compressed modernization severed traditional meaning structures without building new ones — and what young people do when &ldquo;effort→reward&rdquo; breaks.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">The Aphasia of Contemporary Art (失语的当代艺术)</span>
-              <span class="doc-year">2025</span>
-              <span class="doc-desc">Guaren Project core essay. Diagnosing art&rsquo;s loss of a position of responsibility under neoliberal governance — and proposing channel-type art practice as an alternative.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">Witness and Transformation: Sebastião Salgado&rsquo;s Documentary Photography</span>
-              <span class="doc-year">2024</span>
-              <span class="doc-desc">Academic paper on the ethics of aestheticizing suffering — can beauty serve truth in documentary practice, or does it inevitably filter and consume what it claims to witness?</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">Seeing Mountains as Mountains Again: Zao Wou-Ki&rsquo;s Three Metamorphoses</span>
-              <span class="doc-year">2024</span>
-              <span class="doc-desc">Tracing Zao Wou-Ki&rsquo;s journey through three stages of East-West synthesis — from symbolic insertion to spontaneous expression to beyond the question of East and West.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- B: Fiction -->
-        <div class="writing-cat">
-          <h4>B. Fiction</h4>
-          <ul class="doc-list">
-            <li class="doc-item">
-              <span class="doc-title"><em>Family Banquet</em> (家宴)</span>
-              <span class="doc-year">2025–2026 &nbsp;·&nbsp; Novel</span>
-              <span class="doc-desc">The dining table as courtroom — mother-daughter love disguised as criticism, silence as the only speech that carries no guilt. The blood in the refrigerator seeped in over decades.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title"><em>The Last Letter to Mother</em> (给母亲的最后一封信)</span>
-              <span class="doc-year">2024 &nbsp;·&nbsp; Novella, 16,095 words</span>
-              <span class="doc-desc">A daughter&rsquo;s unsent letter. When &ldquo;I did everything for you&rdquo; becomes a moral position that ends all argument, what remains is a letter addressed to a name, not a title.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title"><em>Qingming, Received</em> (清茗，收)</span>
-              <span class="doc-year">2025 &nbsp;·&nbsp; AI-Assisted Short Film Script</span>
-              <span class="doc-desc">Meta-narrative: an AIGC creator tries to adapt her novel with AI. The AI can generate perfect images but cannot understand standing below a window without going up. So she speaks the parts AI cannot.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title"><em>Blue Stops</em> (蓝止)</span>
-              <span class="doc-year">2025 &nbsp;·&nbsp; Guizhou Batik · Short Film Script</span>
-              <span class="doc-desc">A batik designer returns to her Miao village after years away. Tradition, innovation, and a letter that uses her teacher&rsquo;s name instead of her title. The reply is one word: &ldquo;好.&rdquo;</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- C: Poetry -->
-        <div class="writing-cat">
-          <h4>C. Poetry</h4>
-          <ul class="doc-list">
-            <li class="doc-item">
-              <span class="doc-title">Selected Poems: <em>I and Them</em> · <em>Confession of a Clear Wind</em> · <em>Silent Night</em></span>
-              <span class="doc-year">2023–2024</span>
-              <span class="doc-desc">Early poems — the sea, bodies, death, silence, and the distance between people standing on the same shore.</span>
-            </li>
-            <li class="doc-item">
-              <span class="doc-title">Selected Poems: <em>Rebirth</em> · <em>The Small Dark Room</em> · <em>Growth</em> · <em>Returning Home</em></span>
-              <span class="doc-year">2025–2026</span>
-              <span class="doc-desc">Later poems — mother, cracks, the well that thirsts, the sun splitting the earth in two. More bone. Less fog.</span>
-            </li>
-          </ul>
-        </div>
-
+        <h2 style="margin-bottom:.3rem;">Writing</h2>
+        <p style="color:var(--ink-light);font-size:.85rem;">Click any title to expand and read the full text. All texts are editable — changes save in your browser.</p>
       </div>
-
-      <!-- RIGHT: AI Search -->
-      <div class="search-box" id="search-box">
-        <h4>Search</h4>
-        <p class="hint">Query by time, theme, or keyword. Try: &ldquo;Heidegger painting&rdquo; · &ldquo;2024–2025 landscape&rdquo; · &ldquo;body embodiment&rdquo;</p>
-        <input type="text" id="search-input" placeholder='e.g. "2023 to 2025 · authenticity"' oninput="Writing.search(this.value)">
-        <div class="search-results" id="search-results">
-          <p class="sr-empty">Results appear here.</p>
-        </div>
-      </div>
-
     </div>
+
+    <!-- A: Critical Essays -->
+    <div class="writing-cat" style="margin-bottom:2.5rem;">
+      <h4 style="margin-bottom:1rem;">A. Critical Essays</h4>
+      <div id="cat-essays"><!-- JS fills --></div>
+    </div>
+
+    <!-- B: Fiction -->
+    <div class="writing-cat" style="margin-bottom:2.5rem;">
+      <h4 style="margin-bottom:1rem;">B. Fiction</h4>
+      <div id="cat-fiction"><!-- JS fills --></div>
+    </div>
+
+    <!-- C: Poetry -->
+    <div class="writing-cat" style="margin-bottom:2.5rem;">
+      <h4 style="margin-bottom:1rem;">C. Poetry</h4>
+      <div id="cat-poetry"><!-- JS fills --></div>
+    </div>
+
   </div>
 </main>
+
+<!-- Search FAB + Overlay -->
+<button class="search-toggle" onclick="Writing.openSearch()" title="Search">⌕</button>
+
+<div class="search-overlay" id="search-overlay">
+  <button class="close-btn" onclick="Writing.closeSearch()">Close ✕</button>
+  <input type="text" id="search-input" placeholder='Search by time, theme, or keyword...' oninput="Writing.search(this.value)">
+  <div class="results" id="search-results"></div>
+</div>
 
 <footer class="footer"><p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p></footer>
 <script src="assets/js/writing.js"></script>
