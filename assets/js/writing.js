@@ -54,11 +54,11 @@ var Writing = (function(){
       catDocs.forEach(function(doc){
         var wordCount = doc.text ? doc.text.replace(/\s/g,'').length : 0;
         var wcDisplay = wordCount > 0 ? ' · ~'+Math.round(wordCount)+' chars' : '';
-        h+='<div class="doc-item" id="doc-'+doc.id+'" onclick="Writing.toggle(\''+doc.id+'\')">'+
-          '<span class="doc-title">'+esc(doc.title)+'</span>'+
-          '<span class="doc-desc">'+esc(doc.desc)+'</span>'+
+        h+='<div class="doc-item" id="doc-'+doc.id+'">'+
+          '<span class="doc-title" contenteditable="true" data-field="title" data-id="'+doc.id+'" onclick="event.stopPropagation()">'+esc(doc.title)+'</span>'+
+          '<span class="doc-desc" contenteditable="true" data-field="desc" data-id="'+doc.id+'" onclick="event.stopPropagation()">'+esc(doc.desc)+'</span>'+
           '<span class="doc-year">'+esc(doc.year)+wcDisplay+'</span>'+
-          '<span class="expand-hint">Click to expand full text</span>'+
+          '<span class="expand-hint" onclick="Writing.toggle(\''+doc.id+'\')">Click to expand full text</span>'+
           '<div class="doc-full">'+
             '<div class="editor-toolbar">'+
               '<span class="save-indicator">Editing — changes auto-save</span>'+
@@ -160,8 +160,21 @@ var Writing = (function(){
     }
   });
 
+  // ── Title/Desc editing ──────────────────────
+  function bindMetaEdit(){
+    document.querySelectorAll('.doc-title[contenteditable], .doc-desc[contenteditable]').forEach(function(el){
+      el.addEventListener('blur',function(){
+        var id=el.getAttribute('data-id');
+        var field=el.getAttribute('data-field');
+        var doc=null;
+        for(var i=0;i<docs.length;i++){ if(docs[i].id===id){ doc=docs[i];break;} }
+        if(doc&&field){ doc[field]=el.textContent.trim(); saveDocs(); }
+      });
+    });
+  }
+
   // ── Init ──────────────────────────────────────
-  function init(){ loadDocs(); render(); }
+  function init(){ loadDocs(); render(); setTimeout(bindMetaEdit,100); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); }
   else{ init(); }
 

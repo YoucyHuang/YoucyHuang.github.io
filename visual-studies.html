@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Studies — Youcy Huang</title>
+  <meta name="description" content="Visual Studies — a research archive tracing fifteen years of painting development, art historical inquiry, and visual investigation.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>山</text></svg>">
+  <style>
+    .vs-container{max-width:1100px;margin:0 auto}
+    .vs-section{margin-bottom:3.5rem}
+    .vs-head{border-bottom:1px solid var(--rule);padding-bottom:.8rem;margin-bottom:1.2rem}
+    .vs-head h3{font-size:1.2rem;font-weight:500;margin-bottom:.2rem}
+    .vs-head .vs-years{font-family:var(--sans);font-size:.6rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .vs-text{max-width:660px;font-size:.88rem;line-height:1.9;color:var(--ink-light);margin-bottom:1.5rem}
+    .vs-text[contenteditable]:focus{outline:1px dashed var(--rule);padding:4px 6px}
+    .vs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+    .vs-item{cursor:pointer;transition:opacity .2s}
+    .vs-item:hover{opacity:.82}
+    .vs-item img{width:100%;height:auto;display:block;background:var(--paper)}
+    .vs-item .vs-cap{font-family:var(--sans);font-size:.55rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:.3rem}
+    .vs-toolbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:1.2rem;border-bottom:1px solid var(--rule);margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+    .vs-toolbar h1{font-size:1.5rem;font-weight:400;margin:0}
+    .vs-controls{display:flex;align-items:center;gap:.8rem}
+    .vs-controls label{font-family:var(--sans);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+    .vs-controls input[type=range]{width:80px;accent-color:var(--ink)}
+    /* Lightbox */
+    .lb{display:none;position:fixed;inset:0;z-index:200;background:rgba(245,243,238,.97);cursor:pointer;align-items:center;justify-content:center}
+    .lb.on{display:flex}
+    .lb img{max-width:93vw;max-height:93vh;object-fit:contain;box-shadow:0 4px 40px rgba(0,0,0,.05)}
+    .lb .lb-close{position:absolute;top:1rem;right:1.5rem;font-family:var(--sans);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Youcy Huang</a>
+  <ul class="nav-links">
+    <li><a href="visual-studies.html" class="active">Visual Studies</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="digital.html">Digital</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="page-inner">
+    <div class="vs-container">
+
+      <!-- Toolbar -->
+      <div class="vs-toolbar">
+        <div>
+          <h1>Visual Studies</h1>
+          <p style="font-size:.78rem;color:var(--ink-light);margin-top:.3rem;">A research archive tracing fifteen years of painting development and art-historical inquiry. The works are organized as a file — browse by period to follow the trajectory of a mind learning to see.</p>
+        </div>
+        <div class="vs-controls">
+          <label>Size</label>
+          <input type="range" id="size-slider" min="160" max="320" value="220" oninput="VS.resize(this.value)">
+        </div>
+      </div>
+
+      <!-- Rendered by JS -->
+      <div id="vs-content"></div>
+
+    </div>
+  </div>
+</main>
+
+<div class="lb" id="lightbox"><button class="lb-close">Close</button><img src="" alt=""></div>
+<footer class="footer"><p>Youcy Huang &copy; 2026 &nbsp;·&nbsp; youcyhuang@proton.me</p></footer>
+<script src="assets/js/visual-studies.js"></script>
+</body>
+</html>
