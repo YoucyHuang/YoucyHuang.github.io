@@ -16,16 +16,16 @@
   --nav-h:3.5rem;
   --thumb-size: 200px;
 }
-html{font-size:17px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.7}
+html{font-size:18px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.7;font-weight:400}
 
 /* Typography */
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
-h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:.02em}
-h2{font-size:clamp(1.4rem,2.5vw,1.8rem)}
-h3{font-size:1rem;font-weight:500}
-h4{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-p{font-size:.9rem;color:var(--ink-light);margin-bottom:.8rem}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.2}
+h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:500;letter-spacing:.02em}
+h2{font-size:clamp(1.4rem,2.5vw,1.8rem);font-weight:500}
+h3{font-size:1.05rem;font-weight:600}
+h4{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+p{font-size:.95rem;color:var(--ink-light);margin-bottom:.8rem;font-weight:400}
 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);transition:border-color .2s}
 a:hover{border-bottom-color:var(--ink)}
 
