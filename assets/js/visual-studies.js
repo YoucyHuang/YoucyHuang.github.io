@@ -252,5 +252,39 @@ var VS = (function(){
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); }
   else{ init(); }
 
-  return { resetLayout:resetLayout, lightbox:lightbox };
+  function exportLayout(){
+    var data = { layout: layout, texts: {} };
+    sections.forEach(function(sec){ data.texts[sec.id] = sec.text; });
+    var blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'youcy-visual-studies-layout.json';
+    a.click();
+  }
+
+  function importLayout(){
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = function(e){
+      var file = e.target.files[0];
+      if(!file) return;
+      var reader = new FileReader();
+      reader.onload = function(ev){
+        try{
+          var data = JSON.parse(ev.target.result);
+          if(data.layout){ layout = data.layout; saveLayout(); }
+          if(data.texts){
+            sections.forEach(function(sec){ if(data.texts[sec.id]) sec.text = data.texts[sec.id]; });
+            saveSections();
+          }
+          render();
+        }catch(err){ alert('Invalid JSON file'); }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  }
+
+  return { resetLayout:resetLayout, lightbox:lightbox, exportLayout:exportLayout, importLayout:importLayout };
 })();
